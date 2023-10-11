@@ -7,7 +7,7 @@ import SearchMoviesList from 'components/SearchMoviesList/SearchMoviesList';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { getSearchMovies } from 'services/movies-api';
-import { scrollToBottom } from 'utils/scroll';
+
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -53,7 +53,7 @@ const Movies = () => {
 
   const onClick = () => {
     setPage(prevPage => prevPage + 1);
-    scrollToBottom();
+    // scrollToBottom();
   };
 
   return (
