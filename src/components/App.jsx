@@ -7,14 +7,8 @@ const App = () => {
   return (
     <>
       <Routes>
-        <Route  element={<SharedLayout />}>
           <Route index element={<Home />} />
           <Route  element={<Movies />} />
-          <Route element={<MovieDetails />}>
-            <Route  element={<Cast />} />
-            <Route  element={<Reviews />} />
-          </Route>
-        </Route>
       </Routes>
     </>
   );
