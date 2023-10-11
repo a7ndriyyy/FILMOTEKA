@@ -1,7 +1,7 @@
 import { Container, Section } from 'components/App.styled';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getReviewMovie } from 'services/movies-api';
+import { getReviewMovie } from 'services/movie-api';
 import ReviewsList from './ReviewsList/ReviewsList';
 
 const Reviews = () => {

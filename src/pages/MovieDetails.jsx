@@ -1,10 +1,10 @@
 import { Container, Section } from 'components/App.styled';
 import Error from 'components/Error/Error';
 import Loading from 'components/Loading/Loading';
-import MovieList from 'components/Movielist/MovieList';
+import MovieList from 'components/MovieList/MovieList';
 import React, { Suspense, useEffect, useState } from 'react';
 import { Outlet, useParams } from 'react-router-dom';
-import { getMoveDetails } from 'services/movies-api';
+import { getMoveDetails } from 'services/movie-api';
 
 const MovieDetails = () => {
   const [movie, setMovie] = useState({});
