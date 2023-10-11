@@ -4,7 +4,7 @@ import HomeList from 'components/HomeList/HomeList';
 import Loading from 'components/Loading/Loading';
 import { useEffect, useState } from 'react';
 
-import { getMovies } from 'services/movies-api';
+import { getMovies } from 'services/movie-api';
 
 const Home = () => {
   const [movies, setMovies] = useState([]);

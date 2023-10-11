@@ -6,7 +6,7 @@ import SearchMoviesForm from 'components/SearchMoviesForm/SearchMoviesForm';
 import SearchMoviesList from 'components/SearchMoviesList/SearchMoviesList';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { getSearchMovies } from 'services/movies-api';
+import { getSearchMovies } from 'services/movie-api';
 
 
 const Movies = () => {
