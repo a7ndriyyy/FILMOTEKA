@@ -53,7 +53,6 @@ const Movies = () => {
 
   const onClick = () => {
     setPage(prevPage => prevPage + 1);
-    // scrollToBottom();
   };
 
   return (

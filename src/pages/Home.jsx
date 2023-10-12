@@ -29,7 +29,7 @@ const Home = () => {
   return (
     <Section>
       <Container>
-        <h1>Popular movies of the day! </h1>
+        <h1>Trending Today! </h1>
         {error && <Error />}
         {loading ? <HomeList movies={movies} /> : <Loading />}
       </Container>
