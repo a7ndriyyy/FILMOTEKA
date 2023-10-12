@@ -3,7 +3,7 @@ import { NavLink, Outlet } from 'react-router-dom';
 import { Header, LinkStyle } from './SharedLayout.styled';
 import { Container } from 'components/App.styled';
 import Loading from 'components/Loading/Loading';
-// import { Container } from 'components/App.styled';
+
 
 const SharedLayout = () => {
   return (
