@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Header = styled.header`
-  background-color: #b6c6bc;
+  background-color: rgb(106, 90, 205);
   /* border-bottom: 1px solid #eee; */
   padding: 0 20px;
   nav {

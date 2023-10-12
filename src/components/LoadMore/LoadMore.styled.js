@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
-/*
- * Стили компонента Buton (Load more)
- */
+
 export const Button = styled.button`
   padding: 8px 16px;
   margin-left: auto;
@@ -24,6 +22,6 @@ export const Button = styled.button`
 
   &:hover,
   &:focus {
-    background-color: #000;
+    background-color: rgb(106, 90, 205);
   }
 `;
