@@ -1,15 +1,18 @@
 import { Label,  Input , SearchForm, ButtonSearch} from './SearchMoviesForm.styled';
 import { useState } from 'react'
 
-const SearchBar = ({ handleSubmit, setSearchParams }) => {
-const [searchValue, setSearchValue] = useState('');
-
+const SearchBar = ({setSearchParams }) => {
+  const [searchValue, setSearchValue] = useState('');
+  
+  const handleSubmit = event => {
+    event.preventDefault();
+    setSearchParams({ query: currentQuery });
+};
   const handleSearchState = e => {
     const currentQuery = e.target.value.trim();
     setSearchValue(currentQuery);
-    setSearchParams(currentQuery !== '' ? { query: currentQuery } : {});
   };
-
+ 
   return (
     <SearchForm onSubmit={handleSubmit}>
       <ButtonSearch type="submit">

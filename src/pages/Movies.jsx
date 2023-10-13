@@ -11,12 +11,12 @@ import { getSearchMovies } from 'services/movie-api';
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
-  const [queryText, setQueryText] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [loadMore, setLoadMore] = useState(false);
-  const queryParam = queryText.get('query') ?? '';
+  const queryParam = searchParams.get('query') ?? '';
 
   useEffect(() => {
     if (!queryParam) return setMovies([]);
@@ -48,7 +48,7 @@ const Movies = () => {
     if (!queryParam) return setLoadMore(false);
   }, [queryParam]);
   const handleQuery = query => {
-    setQueryText(query);
+    setSearchParams(query);
   };
 
   const onClick = () => {
@@ -59,9 +59,10 @@ const Movies = () => {
     <section>
       <Container>
         <SearchMoviesForm
-          handleQuery={handleQuery}
-          queryParam={queryParam}
-          setPage={setPage}
+          // handleQuery={handleQuery}
+          // queryParam={queryParam}
+          // setPage={setPage}
+          setSearchParams={setSearchParams}
         />
         {loading ? (
           <Loading />
