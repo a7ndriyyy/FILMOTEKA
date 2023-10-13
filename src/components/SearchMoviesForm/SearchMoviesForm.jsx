@@ -10,7 +10,6 @@ const SearchBar = ({setSearchParams }) => {
 };
   const handleSearchState = e => {
     const currentQuery = e.target.value.trim();
-    console.log(e.target.value);
     setSearchValue(currentQuery);
   };
  
