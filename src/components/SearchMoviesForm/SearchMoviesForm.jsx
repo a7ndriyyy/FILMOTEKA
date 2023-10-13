@@ -6,11 +6,10 @@ const SearchBar = ({setSearchParams }) => {
   
   const handleSubmit = event => {
     event.preventDefault();
-    setSearchParams({ query: currentQuery });
+    setSearchParams({ query: searchValue });
 };
   const handleSearchState = e => {
-    const currentQuery = e.target.value.trim();
-    setSearchValue(currentQuery);
+    setSearchValue(e.target.value.trim());
   };
  
   return (

@@ -44,12 +44,12 @@ const Movies = () => {
     searchMovie(queryParam, page);
   }, [page, queryParam]);
 
-  useEffect(() => {
-    if (!queryParam) return setLoadMore(false);
-  }, [queryParam]);
-  const handleQuery = query => {
-    setSearchParams(query);
-  };
+  // useEffect(() => {
+  //   if (!queryParam) return setLoadMore(false);
+  // }, [queryParam]);
+  // const handleQuery = query => {
+  //   setSearchParams(query);
+  // };
 
   const onClick = () => {
     setPage(prevPage => prevPage + 1);
