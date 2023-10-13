@@ -1,23 +1,28 @@
-import { Label } from './SearchMoviesForm.styled';
+import { Label,  Input , SearchForm, ButtonSearch} from './SearchMoviesForm.styled';
+import { useState } from 'react'
 
-const SearchMoviesForm = ({ handleQuery, queryParam, setPage }) => {
-  const onSearch = e => {
-    const query = e.target.value;
-    const nextParams = query !== '' ? { query } : {};
-    handleQuery(nextParams);
-    setPage(1);
+export const SearchBar = ({ handleSubmit, setSearchParams }) => {
+const [searchValue, setSearchValue] = useState('');
+
+  const handleSearchState = e => {
+    const currentQuery = e.target.value.trim();
+    setSearchValue(currentQuery);
+    setSearchParams(currentQuery !== '' ? { query: currentQuery } : {});
   };
-
   return (
-    <Label>
-      <input
+    <SearchForm onSubmit={handleSubmit}>
+      <ButtonSearch type="submit">
+        <Label>Search</Label>
+      </ButtonSearch>
+      <Input
         type="text"
-        placeholder="Search"
-        value={queryParam}
-        onChange={onSearch}
+        autoComplete="off"
+        autoFocus
+        placeholder="Search films"
+        value={searchValue}
+        onChange={handleSearchState}
       />
-    </Label>
+    </SearchForm>
   );
-};
-
-export default SearchMoviesForm;
+}
+export default SearchBar;

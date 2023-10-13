@@ -47,7 +47,7 @@ export const LinkStyled = styled(Link)`
   text-decoration: none;
   padding-left: 60px;
   padding-right: 20px;
-  background-color: #fff;
+  background-color: rgb(106, 90, 205);
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 
