@@ -4,6 +4,7 @@ import { DetailWrrap, ImgWrrap, LinkStyled, Span } from './MovieItem.styled';
 
 const BASE_IMG = 'https://image.tmdb.org/t/p/w300';
 
+
 const MovieItem = ({ movie }) => {
   const location = useLocation();
 
